@@ -1,0 +1,5 @@
+strings:
+  inputs: ../Crypto_Currency_Wallet/Resources/en.lproj/Localizable.strings
+  outputs:
+    templatePath: fdlanguage.stencil
+    output: ../Crypto_Currency_Wallet/Resources/lang/L10n.swift
