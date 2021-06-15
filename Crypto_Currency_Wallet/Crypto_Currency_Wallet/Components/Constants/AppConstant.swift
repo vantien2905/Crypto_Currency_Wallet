@@ -9,11 +9,12 @@ import Foundation
 import UIKit
 
 struct AppConstant {
-    static let BASE_URL = "https://www.coinhako.com/api/v3"
-    static let countdownRefresh: Double = 30
+    static let BASE_URL             = "https://www.coinhako.com/api/v3"
+    static let countdownRefresh     : Double = 30
+    static let languageCode         = "languageCode"
 }
 
 struct AppColor {
-    static let search = UIColor(hexString: "#1ABC9C")
-    static let favorite = UIColor(hexString: "#E74C3C")
+    static let search               = UIColor(hexString: "#1ABC9C")
+    static let favorite             = UIColor(hexString: "#E74C3C")
 }

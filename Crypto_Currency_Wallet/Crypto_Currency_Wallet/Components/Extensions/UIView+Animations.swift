@@ -12,11 +12,14 @@ public typealias CompletionClosure = (() -> Void)
 
 extension UIView {
     
-    func setAnimation(animation: CompletionClosure?, complete: CompletionClosure? = nil) {
+    func setAnimation(animation: CompletionClosure?,
+                      complete: CompletionClosure? = nil) {
         guard let superView = superview else { return }
         superView.layoutIfNeeded()
         
-        UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseInOut]) {
+        UIView.animate(withDuration: 0.4,
+                       delay: 0,
+                       options: [.curveEaseInOut]) {
             animation?()
             superView.layoutIfNeeded()
         } completion: { _ in

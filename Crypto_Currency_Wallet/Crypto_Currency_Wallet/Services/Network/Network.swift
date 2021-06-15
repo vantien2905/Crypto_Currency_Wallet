@@ -17,7 +17,9 @@ import Alamofire
  ***/
 
 protocol APINetworkProtocol {
-    func requestData(endPoint: EndPointType, success: @escaping NetworkSuccess, failure: @escaping RequestFailure)
+    func requestData(endPoint: EndPointType,
+                     success: @escaping NetworkSuccess,
+                     failure: @escaping RequestFailure)
 }
 
 struct APINetwork: APINetworkProtocol {
@@ -27,15 +29,15 @@ struct APINetwork: APINetworkProtocol {
         self.request = request
     }
 
-    func requestData(endPoint: EndPointType, success: @escaping NetworkSuccess, failure: @escaping RequestFailure) {
+    func requestData(endPoint: EndPointType,
+                     success: @escaping NetworkSuccess,
+                     failure: @escaping RequestFailure) {
         request.requestData(endPoint: endPoint, success: { data in
             let json = JSON(data)
             guard let result = Mapper<BaseResponse>().map(JSONObject: json.dictionaryObject) else {
-                
                 failure(APPError.canNotParseData)
                 return
             }
-
             self.handleResponse(response: result, success: success, failure: failure)
         }) { error in
             failure(APIError(error: error))
@@ -45,7 +47,9 @@ struct APINetwork: APINetworkProtocol {
 
 // handle base response
 extension APINetwork {
-    private func handleResponse(response: BaseResponse, success: @escaping NetworkSuccess, failure: @escaping RequestFailure) {
+    private func handleResponse(response: BaseResponse,
+                                success: @escaping NetworkSuccess,
+                                failure: @escaping RequestFailure) {
         if response.data != nil || response.message == nil {
             success(response)
         } else {

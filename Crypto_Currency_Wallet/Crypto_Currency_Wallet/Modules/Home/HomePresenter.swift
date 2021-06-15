@@ -58,12 +58,13 @@ class HomePresenter {
 
     deinit {
         stopTimer()
-        Reachability.shared.stopMonitoring()
     }
-    
 }
 
 extension HomePresenter: HomePresenterProtocol {
+    func showNotInternetVC() {
+        router.showNotInternetVC()
+    }
     
     func getListCoinRepeat(_ time: Double) {
         interactor?.getListCoin()
@@ -101,6 +102,14 @@ extension HomePresenter: HomePresenterProtocol {
             : self.listCoinOrigin.filter({$0.name&.lowercased().contains(text)
                                             || $0.base&.lowercased().contains(text)})
     }
+    
+    func checkEmptyData(tableView: UITableView) {
+        if count == 0 {
+            tableView.setEmptyView()
+        } else {
+            tableView.restore()
+        }
+    }
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
@@ -111,6 +120,6 @@ extension HomePresenter: HomeInteractorOutputProtocol {
     }
     
     func didGetListCoinError(error: APIError) {
-        
+        view?.didGetListCoinError(error: error)
     }
 }

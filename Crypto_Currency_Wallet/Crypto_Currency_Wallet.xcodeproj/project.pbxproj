@@ -22,7 +22,7 @@
 		DF4A7DD62672F5D40028774B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4A7DD42672F5D40028774B /* LaunchScreen.storyboard */; };
 		DF4A7DE12672F5D50028774B /* Crypto_Currency_WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A7DE02672F5D50028774B /* Crypto_Currency_WalletTests.swift */; };
 		DF4A7DEC2672F5D50028774B /* Crypto_Currency_WalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A7DEB2672F5D50028774B /* Crypto_Currency_WalletUITests.swift */; };
-		DF534E3B2677A11B003D0A45 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF534E3A2677A11B003D0A45 /* Utils.swift */; };
+		DF534E3B2677A11B003D0A45 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF534E3A2677A11B003D0A45 /* ReachabilityHelper.swift */; };
 		DF534E3E2677AB58003D0A45 /* ComponentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF534E3D2677AB58003D0A45 /* ComponentBuilder.swift */; };
 		DF58D9B52672F8C6003A90E5 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58D9AF2672F8C6003A90E5 /* HomePresenter.swift */; };
 		DF58D9B62672F8C6003A90E5 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58D9B02672F8C6003A90E5 /* HomeRouter.swift */; };
@@ -30,6 +30,12 @@
 		DF58D9B82672F8C6003A90E5 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58D9B22672F8C6003A90E5 /* HomeProtocols.swift */; };
 		DF58D9B92672F8C6003A90E5 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58D9B32672F8C6003A90E5 /* HomeInteractor.swift */; };
 		DF58D9BA2672F8C6003A90E5 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF58D9B42672F8C6003A90E5 /* HomeViewController.xib */; };
+		DF71658A267882C800EA2F20 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF716589267882C800EA2F20 /* Reachability.swift */; };
+		DF71658C267883DF00EA2F20 /* Multicast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF71658B267883DF00EA2F20 /* Multicast.swift */; };
+		DF7165972678B03F00EA2F20 /* LostInternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7165962678B03F00EA2F20 /* LostInternetViewController.swift */; };
+		DF71659B2678D44400EA2F20 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF71659D2678D44400EA2F20 /* Localizable.strings */; };
+		DF71659F2678D4AB00EA2F20 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF71659E2678D4AB00EA2F20 /* L10n.swift */; };
+		DF7165A12678D53E00EA2F20 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7165A02678D53E00EA2F20 /* Language.swift */; };
 		DF7AAB1F2673B3EF008C1909 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AAB1E2673B3EF008C1909 /* AppConstant.swift */; };
 		DF7AAB222673B441008C1909 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AAB212673B441008C1909 /* String+Extensions.swift */; };
 		DF7AAB252673BB4B008C1909 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AAB242673BB4B008C1909 /* UIViewController+Extensions.swift */; };
@@ -101,7 +107,7 @@
 		DF4A7DE72672F5D50028774B /* Crypto_Currency_WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Crypto_Currency_WalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4A7DEB2672F5D50028774B /* Crypto_Currency_WalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto_Currency_WalletUITests.swift; sourceTree = "<group>"; };
 		DF4A7DED2672F5D50028774B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF534E3A2677A11B003D0A45 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		DF534E3A2677A11B003D0A45 /* ReachabilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
 		DF534E3D2677AB58003D0A45 /* ComponentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBuilder.swift; sourceTree = "<group>"; };
 		DF58D9AF2672F8C6003A90E5 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		DF58D9B02672F8C6003A90E5 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -109,6 +115,12 @@
 		DF58D9B22672F8C6003A90E5 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
 		DF58D9B32672F8C6003A90E5 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		DF58D9B42672F8C6003A90E5 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		DF716589267882C800EA2F20 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		DF71658B267883DF00EA2F20 /* Multicast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Multicast.swift; sourceTree = "<group>"; };
+		DF7165962678B03F00EA2F20 /* LostInternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostInternetViewController.swift; sourceTree = "<group>"; };
+		DF71659C2678D44400EA2F20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DF71659E2678D4AB00EA2F20 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		DF7165A02678D53E00EA2F20 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		DF7AAB1E2673B3EF008C1909 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		DF7AAB212673B441008C1909 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		DF7AAB242673BB4B008C1909 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -211,7 +223,9 @@
 			isa = PBXGroup;
 			children = (
 				DF46DC0A2674E810008CBB65 /* RealmHelper.swift */,
-				DF534E3A2677A11B003D0A45 /* Utils.swift */,
+				DF534E3A2677A11B003D0A45 /* ReachabilityHelper.swift */,
+				DF716589267882C800EA2F20 /* Reachability.swift */,
+				DF71658B267883DF00EA2F20 /* Multicast.swift */,
 			);
 			name = Helpers;
 			path = "Helpẻ";
@@ -220,7 +234,10 @@
 		DF46DC0C2674F3A7008CBB65 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DF7165982678D3F700EA2F20 /* lang */,
 				DF46DC0E2674F61B008CBB65 /* IMG.swift */,
+				DF71659D2678D44400EA2F20 /* Localizable.strings */,
+				DF7165A02678D53E00EA2F20 /* Language.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -301,6 +318,7 @@
 		DF58D9AE2672F8BC003A90E5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DF7165952678B01800EA2F20 /* LostInternet */,
 				DF7AAB262673BED2008C1909 /* Cells */,
 				DF58D9AF2672F8C6003A90E5 /* HomePresenter.swift */,
 				DF58D9B02672F8C6003A90E5 /* HomeRouter.swift */,
@@ -310,6 +328,22 @@
 				DF58D9B42672F8C6003A90E5 /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		DF7165952678B01800EA2F20 /* LostInternet */ = {
+			isa = PBXGroup;
+			children = (
+				DF7165962678B03F00EA2F20 /* LostInternetViewController.swift */,
+			);
+			path = LostInternet;
+			sourceTree = "<group>";
+		};
+		DF7165982678D3F700EA2F20 /* lang */ = {
+			isa = PBXGroup;
+			children = (
+				DF71659E2678D4AB00EA2F20 /* L10n.swift */,
+			);
+			path = lang;
 			sourceTree = "<group>";
 		};
 		DF7AAB1D2673B3D5008C1909 /* Components */ = {
@@ -537,6 +571,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF4A7DD62672F5D40028774B /* LaunchScreen.storyboard in Resources */,
+				DF71659B2678D44400EA2F20 /* Localizable.strings in Resources */,
 				DF46DC0526744CAA008CBB65 /* HomeTopView.xib in Resources */,
 				DF4A7DD32672F5D40028774B /* Assets.xcassets in Resources */,
 				DF7AAB2B2673BEFA008C1909 /* CoinTableViewCell.xib in Resources */,
@@ -689,15 +724,20 @@
 				DF58D9B52672F8C6003A90E5 /* HomePresenter.swift in Sources */,
 				DF7AAB1F2673B3EF008C1909 /* AppConstant.swift in Sources */,
 				DF86DC602673B0B300446FF0 /* Network.swift in Sources */,
+				DF71659F2678D4AB00EA2F20 /* L10n.swift in Sources */,
 				DF86DC5F2673B0B300446FF0 /* BaseResponse.swift in Sources */,
 				DF58D9B82672F8C6003A90E5 /* HomeProtocols.swift in Sources */,
-				DF534E3B2677A11B003D0A45 /* Utils.swift in Sources */,
+				DF71658C267883DF00EA2F20 /* Multicast.swift in Sources */,
+				DF534E3B2677A11B003D0A45 /* ReachabilityHelper.swift in Sources */,
+				DF7165A12678D53E00EA2F20 /* Language.swift in Sources */,
 				DF58D9B62672F8C6003A90E5 /* HomeRouter.swift in Sources */,
 				DF86DC712673B0B300446FF0 /* EndPointType.swift in Sources */,
 				DF46DC0326744C9E008CBB65 /* HomeTopView.swift in Sources */,
+				DF7165972678B03F00EA2F20 /* LostInternetViewController.swift in Sources */,
 				DF46DC0B2674E810008CBB65 /* RealmHelper.swift in Sources */,
 				DF58D9B72672F8C6003A90E5 /* HomeViewController.swift in Sources */,
 				DF40CDF226771521009F7CC7 /* UIView+Animations.swift in Sources */,
+				DF71658A267882C800EA2F20 /* Reachability.swift in Sources */,
 				DF46DC0826744CD9008CBB65 /* BaseViewXib.swift in Sources */,
 				DF86DC5E2673B0B300446FF0 /* APIError.swift in Sources */,
 				DF86DC632673B0B300446FF0 /* DeviceParam.swift in Sources */,
@@ -747,6 +787,14 @@
 				DF4A7DD52672F5D40028774B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DF71659D2678D44400EA2F20 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF71659C2678D44400EA2F20 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -876,18 +924,18 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XTP22H8L47;
+				DEVELOPMENT_TEAM = TL9L9926Y8;
 				INFOPLIST_FILE = Crypto_Currency_Wallet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.resource.vn.Crypto-Currency-Wallet";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.resource.vn.Crypto-Currency-Wallet.test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -900,7 +948,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XTP22H8L47;
 				INFOPLIST_FILE = Crypto_Currency_Wallet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -908,7 +956,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ch.resource.vn.Crypto-Currency-Wallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

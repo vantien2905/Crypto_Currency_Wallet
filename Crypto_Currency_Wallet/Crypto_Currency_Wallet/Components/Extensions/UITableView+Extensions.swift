@@ -50,7 +50,7 @@ extension UITableView {
 
 extension UITableView {
 
-    func setEmptyView(title: String = "Chưa có dữ liệu",
+    func setEmptyView(title: String = "Empty data",
                       message: String = "",
                       messageImage: UIImage = IMG.empty_data.image ?? UIImage()) {
 
@@ -67,10 +67,10 @@ extension UITableView {
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
 
         titleLabel.textColor = UIColor.lightGray
-        titleLabel.font = UIFont.systemFont(ofSize: 17)
+        titleLabel.font = UIFont.systemFont(ofSize: 19, weight: .bold)
 
         messageLabel.textColor = UIColor.lightGray
-        messageLabel.font = UIFont.systemFont(ofSize: 15)
+        messageLabel.font = UIFont.systemFont(ofSize: 17)
 
         emptyView.addSubview(titleLabel)
         emptyView.addSubview(messageImageView)
@@ -86,7 +86,9 @@ extension UITableView {
             titleLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor),
 
             messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
-            messageLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor)
+            messageLabel.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor),
+            messageLabel.leadingAnchor.constraint(equalTo: emptyView.leadingAnchor, constant: 40)
+
         ])
 
 

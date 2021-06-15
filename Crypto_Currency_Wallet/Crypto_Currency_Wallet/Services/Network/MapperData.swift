@@ -15,12 +15,10 @@ struct MapperData {
     // MARK: MAP JSON OBJECT
     static func mapObject<T: Mappable>(_ successHandler: @escaping SuccessHandler<T>.object) -> NetworkSuccess {
         return { baseResponse in
-            //            let json = baseResponse.message&.toDictionary()
             if let obj = Mapper<T>().map(JSONObject: baseResponse.data) {
                 successHandler(obj)
             } else {
                 let res = Mapper<T>().map(JSONObject: baseResponse.toJSON())
-                print(res)
                 successHandler(res)
             }
         }
@@ -44,7 +42,6 @@ struct MapperData {
     static func mapNoData<T: Mappable>(_ successHandler: @escaping SuccessHandler<T>.object) -> NetworkSuccess {
         return { baseResponse in
             let objResult = Mapper<T>().map(JSONObject: baseResponse.toJSON())
-
             successHandler(objResult)
         }
     }

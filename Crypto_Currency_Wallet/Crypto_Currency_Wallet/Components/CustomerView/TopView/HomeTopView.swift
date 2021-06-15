@@ -31,6 +31,8 @@ class HomeTopView: BaseViewXib {
     override func setUpViews() {
         viewTest.backgroundColor = AppColor.search
         self.addSubview(viewTest)
+        searchButton.imageView?.contentMode = .scaleAspectFit
+        favoriteButton.imageView?.contentMode = .scaleAspectFit
         
         viewTest.snp.makeConstraints {
             $0.height.equalTo(4)
@@ -57,6 +59,10 @@ class HomeTopView: BaseViewXib {
     
     @objc private func searchTextFieldDidChange(_ textField: UITextField) {
         searchDidChangeCallBack?(textField.text&.lowercased())
+    }
+    
+    func switchAction(_ type: PageType) {
+        type == .search ? searchButtonTapped() : favoriteButtonTapped()
     }
     
     @IBAction private func searchButtonTapped() {

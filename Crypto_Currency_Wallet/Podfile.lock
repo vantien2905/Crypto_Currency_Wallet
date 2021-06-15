@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - ObjectMapper (3.3.0)
+  - ReachabilitySwift (5.0.0)
   - Realm (10.7.4):
     - Realm/Headers (= 10.7.4)
   - Realm/Headers (10.7.4)
@@ -17,6 +18,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (= 4.7.3)
   - ObjectMapper (= 3.3.0)
+  - ReachabilitySwift
   - RealmSwift
   - SDWebImage (= 4.4.2)
   - SkeletonView
@@ -28,6 +30,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - ObjectMapper
+    - ReachabilitySwift
     - Realm
     - RealmSwift
     - SDWebImage
@@ -39,6 +42,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Realm: f08ce1a85649a41303ecfe1cbd914c62e9e6d710
   RealmSwift: 60ec49d165f23d040ab48811d8dd177e09baf4d3
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
@@ -47,6 +51,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 5a1156d731cb5605db3e413ee37c964b812ab3e4
+PODFILE CHECKSUM: a5910f71231d2eff6fe275eb3a4f92327428712a
 
 COCOAPODS: 1.10.1

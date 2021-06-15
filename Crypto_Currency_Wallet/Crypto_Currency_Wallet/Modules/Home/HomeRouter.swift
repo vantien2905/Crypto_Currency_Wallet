@@ -13,13 +13,20 @@ import UIKit
 class HomeRouter: HomeWireframeProtocol {
 
     weak var viewController: UIViewController?
+    
+    func showNotInternetVC() {
+        let vc = LostInternetViewController()
+        viewController?.present(vc)
+    }
 
     static func createModule() -> UIViewController {
         // Change to get view from storyboard if not using progammatic UI
         let view = HomeViewController(nibName: nil, bundle: nil)
         let interactor = HomeInteractor()
         let router = HomeRouter()
-        let presenter = HomePresenter(interface: view, interactor: interactor, router: router)
+        let presenter = HomePresenter(interface: view,
+                                      interactor: interactor,
+                                      router: router)
 
         view.presenter = presenter
         interactor.presenter = presenter

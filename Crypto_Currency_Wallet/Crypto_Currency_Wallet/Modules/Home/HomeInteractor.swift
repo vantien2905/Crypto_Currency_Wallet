@@ -13,7 +13,9 @@ import UIKit
 class HomeInteractor: HomeInteractorInputProtocol {
     
     func getListCoin() {
+        
         let data = RealmHelper.share.getObjects(CoinEntity.self).toArray(ofType: CoinEntity.self)
+        
         Provider.shared.homeAPIService.getListCoin { result in
             for (index, item) in result.enumerated() {
                 for local in data {

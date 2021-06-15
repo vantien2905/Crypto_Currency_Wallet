@@ -4,7 +4,6 @@
 {% if tables.count > 0 %}
 {% set accessModifier %}{% if param.publicAccess %}public{% else %}internal{% endif %}{% endset %}
 import Foundation
-import CoreDomain
 
 // swiftlint:disable superfluous_disable_command
 // swiftlint:disable file_length
@@ -69,12 +68,12 @@ extension {{enumName}} {
   private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
     // swiftlint:disable:next nslocalizedstring_key
     let languageCode = Language.sharedInstance.languageCode.rawValue
-    guard let bundleMain = Bundle(identifier: "ch.resource.vn.Crypto-Currency-Wallet"), let path = bundleMain.path(forResource: languageCode, ofType: "lproj"),
+    guard let bundleMain = Bundle(identifier: "ch.resource.vn.Crypto-Currency-Wallet.test"), let path = bundleMain.path(forResource: languageCode, ofType: "lproj"),
       let bundle = Bundle(path: path) else {
         return NSLocalizedString(key, comment: "")
     }
     let defaultValue: String
-    if let bundleMain = Bundle(identifier: "ch.resource.vn.Crypto-Currency-Wallet"), let path = bundleMain.path(forResource: LanguageCode.english.rawValue, ofType: "lproj"),
+    if let bundleMain = Bundle(identifier: "ch.resource.vn.Crypto-Currency-Wallet.test"), let path = bundleMain.path(forResource: LanguageCode.english.rawValue, ofType: "lproj"),
       let englishBundle = Bundle(path: path) {
       defaultValue = NSLocalizedString(key, tableName: table, bundle: englishBundle, comment: "")
     } else {

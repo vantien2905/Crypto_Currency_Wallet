@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Crypto_Currency_Wallet
+
+  Created by Tien Dinh on 15/06/2021.
+  
+*/
+"not_internet_title" = "You are Offline";
+"not_internet_content" = "We can't reached our network right now.\n Please check your connection";
+"not_internet_action" = "Open setting";
+"something_went_wrong" = "Something went wrong";

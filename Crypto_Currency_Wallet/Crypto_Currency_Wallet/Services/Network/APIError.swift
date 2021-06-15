@@ -15,9 +15,9 @@ struct APPError {
 
 // MARK: APIError class
 class APIError: Error {
-    let code: Int?
-    let message: String?
-    var data: Any? = nil
+    let code        : Int?
+    let message     : String?
+    var data        : Any? = nil
 
     init(code: Int?, message: String?) {
         self.code = code

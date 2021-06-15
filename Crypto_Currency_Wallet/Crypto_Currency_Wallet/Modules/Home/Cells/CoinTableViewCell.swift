@@ -42,7 +42,8 @@ class CoinTableViewCell: UITableViewCell {
         guard let coin = coin, let indexPath = indexPath else { return }
         self.coin = coin
         self.indexPath = indexPath
-        logoImageView.sd_setImage(with: URL(string: coin.icon&), placeholderImage: nil)
+        logoImageView.sd_setImage(with: URL(string: coin.icon&),
+                                  placeholderImage: nil)
         nameLabel.text = coin.name
         codeLabel.text = coin.base
         buyPriceLabel.text = "$\(coin.buy_price&)"
@@ -55,6 +56,7 @@ class CoinTableViewCell: UITableViewCell {
     }
     
     @IBAction func favoriteButtonTapped() {
+        favoriteButton.setAnimationTouch()
         RealmHelper.share.updateObject {
             coin.isFavorite = !coin.isFavorite
         }

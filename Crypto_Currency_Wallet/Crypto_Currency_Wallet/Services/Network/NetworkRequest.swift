@@ -30,12 +30,16 @@ struct SuccessHandler<T> {
 
 // NetworkPotocol
 protocol NetworkRequestProtocol {
-    func requestData(endPoint: EndPointType, success: @escaping RequestSuccess, failure: @escaping RequestFailure)
+    func requestData(endPoint: EndPointType,
+                     success: @escaping RequestSuccess,
+                     failure: @escaping RequestFailure)
 }
 
 //---
 struct NetworkRequest: NetworkRequestProtocol {
-    func requestData(endPoint: EndPointType, success: @escaping RequestSuccess, failure: @escaping RequestFailure) {
+    func requestData(endPoint: EndPointType,
+                     success: @escaping RequestSuccess,
+                     failure: @escaping RequestFailure) {
 
         var url: URL!
         if endPoint.path.contains("?") {

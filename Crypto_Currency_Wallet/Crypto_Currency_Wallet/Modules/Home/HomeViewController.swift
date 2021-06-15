@@ -9,6 +9,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class HomeViewController: UIViewController {
     
@@ -23,6 +24,34 @@ class HomeViewController: UIViewController {
         setUpViews()
         hideKeyboard()
         presenter?.getListCoinRepeat(AppConstant.countdownRefresh)
+        ReachabilityHelper.shared.reachability.subscribeEvents(self)
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self,
+                                                  action: #selector(respondToSwipeGesture))
+            swipeRight.direction = .right
+            self.view.addGestureRecognizer(swipeRight)
+        let swipeLeft = UISwipeGestureRecognizer(target: self,
+                                                 action: #selector(respondToSwipeGesture))
+            swipeRight.direction = .left
+            self.view.addGestureRecognizer(swipeLeft)
+
+    }
+    
+    deinit {
+        ReachabilityHelper.shared.reachability.unsubscribeEvents(self)
+    }
+    
+    @objc func respondToSwipeGesture(gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case .right:
+                self.topView.switchAction(.search)
+            case .left:
+                self.topView.switchAction(.favorite)
+            default:
+                break
+            }
+        }
     }
     
     private func configureTableView() {
@@ -49,6 +78,10 @@ extension HomeViewController: HomeViewProtocol {
     func reloadData() {
         tableView.reloadData()
     }
+    
+    func didGetListCoinError(error: APIError) {
+        view.makeToast(L10n.somethingWentWrong)
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -56,7 +89,7 @@ extension HomeViewController: UITableViewDataSource {
         if presenter?.showSkeleton == true {
             return 13
         } else {
-            presenter?.count == 0 ? tableView.setEmptyView() : tableView.restore()
+            presenter?.checkEmptyData(tableView: tableView)
             return presenter?.count ?? 0
         }
     }
@@ -75,5 +108,18 @@ extension HomeViewController: UITableViewDataSource {
 extension HomeViewController: CoinTableViewCellDelegate {
     func favoriteActionTapped(indexPath: IndexPath) {
         self.presenter?.removeCoin(atIndex: indexPath)
+    }
+}
+
+extension HomeViewController: ReachabilityServiceEvents {
+    func reachabilityService(
+        _ service: ReachabilityService,
+        status: ReachabilityService.Status) {
+        switch status {
+        case .notReachable:
+            presenter?.showNotInternetVC()
+        default:
+            break
+        }
     }
 }

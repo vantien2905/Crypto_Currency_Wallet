@@ -25,8 +25,9 @@ class BaseViewXib: UIView {
         if let view     = nib.instantiate(withOwner: self, options: nil)[0] as? UIView {
             view.frame      = bounds
             addSubview(view)
-            view.fillVerticalSuperview()
-            view.fillHorizontalSuperview()
+            view.snp.makeConstraints {
+                $0.edges.equalToSuperview()
+            }
         }
         setUpViews()
     }

@@ -2,7 +2,7 @@ require 'fileutils'
 
 PROJECT_DIR_NAME = "Crypto_Currency_Wallet"
 ASSETS_DIR = File.join(Dir.pwd, "../", PROJECT_DIR_NAME, "Assets.xcassets")
-BUNDLE_ID = "ch.resource.vn.Crypto-Currency-Wallet"
+BUNDLE_ID = "ch.resource.vn.Crypto-Currency-Wallet.test"
 puts "ASSETS_DIR is #{ASSETS_DIR}"
 
 puts "Create file images in #{ASSETS_DIR}"

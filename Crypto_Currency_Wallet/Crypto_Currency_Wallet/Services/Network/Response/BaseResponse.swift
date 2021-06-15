@@ -10,9 +10,9 @@ import ObjectMapper
 
 // Base
 class BaseResponse: Mappable {
-    var status: Int?
-    var message: String?
-    var data: Any?
+    var status      : Int?
+    var message     : String?
+    var data        : Any?
 
     required init?(map: Map) {
         mapping(map: map)

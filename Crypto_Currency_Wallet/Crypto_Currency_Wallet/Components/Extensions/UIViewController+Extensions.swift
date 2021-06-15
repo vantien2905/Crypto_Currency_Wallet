@@ -30,4 +30,13 @@ extension UIViewController {
             nav.view.endEditing(true)
         }
     }
+    
+    func present(_ controller: UIViewController, animated: Bool = true, modal: UIModalPresentationStyle = .fullScreen) {
+        controller.modalPresentationStyle = modal
+        self.present(controller, animated: animated, completion: nil)
+    }
+    
+    func dismiss(animated: Bool = true) {
+        self.dismiss(animated: animated, completion: nil)
+    }
 }
