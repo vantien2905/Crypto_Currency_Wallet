@@ -47,6 +47,7 @@ class HomeTopView: BaseViewXib {
                                   action: #selector(searchTextFieldDidChange),
                                   for: .editingChanged)
         searchTextfield.tintColor = AppColor.search
+        searchTextfield.clearButtonMode = .whileEditing
     }
     
     override func draw(_ rect: CGRect) {

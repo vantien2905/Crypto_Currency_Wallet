@@ -21,6 +21,7 @@ class CoinTableViewCell: UITableViewCell {
     @IBOutlet weak var buyPriceLabel    : UILabel!
     @IBOutlet weak var sellPriceLabel   : UILabel!
     @IBOutlet weak var favoriteButton   : UIButton!
+    @IBOutlet weak var sellPriceImage   : UIImageView!
     
     var coin: CoinEntity!
     
@@ -30,7 +31,6 @@ class CoinTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureSkeletons(true)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -51,7 +51,7 @@ class CoinTableViewCell: UITableViewCell {
                                     ? IMG.favorite_selected.image
                                     : IMG.favorite.image,
                                 for: .normal)
-        configureSkeletons(false)
+        
     }
     
     @IBAction func favoriteButtonTapped() {
@@ -75,7 +75,8 @@ class CoinTableViewCell: UITableViewCell {
             codeLabel,
             buyPriceLabel,
             sellPriceLabel,
-            favoriteButton
+            favoriteButton,
+            sellPriceImage
         ]
         isShow ? showSkeletons(list) : hideSkeletons(list)
     }
@@ -93,5 +94,4 @@ class CoinTableViewCell: UITableViewCell {
             item.hideSkeleton()
         }
     }
-    
 }

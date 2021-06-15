@@ -22,6 +22,8 @@
 		DF4A7DD62672F5D40028774B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4A7DD42672F5D40028774B /* LaunchScreen.storyboard */; };
 		DF4A7DE12672F5D50028774B /* Crypto_Currency_WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A7DE02672F5D50028774B /* Crypto_Currency_WalletTests.swift */; };
 		DF4A7DEC2672F5D50028774B /* Crypto_Currency_WalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4A7DEB2672F5D50028774B /* Crypto_Currency_WalletUITests.swift */; };
+		DF534E3B2677A11B003D0A45 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF534E3A2677A11B003D0A45 /* Utils.swift */; };
+		DF534E3E2677AB58003D0A45 /* ComponentBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF534E3D2677AB58003D0A45 /* ComponentBuilder.swift */; };
 		DF58D9B52672F8C6003A90E5 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58D9AF2672F8C6003A90E5 /* HomePresenter.swift */; };
 		DF58D9B62672F8C6003A90E5 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58D9B02672F8C6003A90E5 /* HomeRouter.swift */; };
 		DF58D9B72672F8C6003A90E5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF58D9B12672F8C6003A90E5 /* HomeViewController.swift */; };
@@ -99,6 +101,8 @@
 		DF4A7DE72672F5D50028774B /* Crypto_Currency_WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Crypto_Currency_WalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF4A7DEB2672F5D50028774B /* Crypto_Currency_WalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto_Currency_WalletUITests.swift; sourceTree = "<group>"; };
 		DF4A7DED2672F5D50028774B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF534E3A2677A11B003D0A45 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		DF534E3D2677AB58003D0A45 /* ComponentBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentBuilder.swift; sourceTree = "<group>"; };
 		DF58D9AF2672F8C6003A90E5 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		DF58D9B02672F8C6003A90E5 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		DF58D9B12672F8C6003A90E5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -189,8 +193,8 @@
 		DF46DC0126744C7B008CBB65 /* CustomerView */ = {
 			isa = PBXGroup;
 			children = (
-				DF46DC0226744C9D008CBB65 /* HomeTopView.swift */,
-				DF46DC0426744CAA008CBB65 /* HomeTopView.xib */,
+				DF534E3C2677AB0D003D0A45 /* TopView */,
+				DF534E3D2677AB58003D0A45 /* ComponentBuilder.swift */,
 			);
 			path = CustomerView;
 			sourceTree = "<group>";
@@ -207,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				DF46DC0A2674E810008CBB65 /* RealmHelper.swift */,
+				DF534E3A2677A11B003D0A45 /* Utils.swift */,
 			);
 			name = Helpers;
 			path = "Helpẻ";
@@ -216,16 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				DF46DC0E2674F61B008CBB65 /* IMG.swift */,
-				DF46DC0D2674F478008CBB65 /* lang */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		DF46DC0D2674F478008CBB65 /* lang */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = lang;
 			sourceTree = "<group>";
 		};
 		DF4A7DBD2672F5D30028774B = {
@@ -290,6 +287,15 @@
 				DF58D9AE2672F8BC003A90E5 /* Home */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		DF534E3C2677AB0D003D0A45 /* TopView */ = {
+			isa = PBXGroup;
+			children = (
+				DF46DC0226744C9D008CBB65 /* HomeTopView.swift */,
+				DF46DC0426744CAA008CBB65 /* HomeTopView.xib */,
+			);
+			path = TopView;
 			sourceTree = "<group>";
 		};
 		DF58D9AE2672F8BC003A90E5 /* Home */ = {
@@ -674,6 +680,7 @@
 				DF7AAB252673BB4B008C1909 /* UIViewController+Extensions.swift in Sources */,
 				DF7AAB312673C48C008C1909 /* UIView+Extensions.swift in Sources */,
 				DF4A7DCA2672F5D30028774B /* AppDelegate.swift in Sources */,
+				DF534E3E2677AB58003D0A45 /* ComponentBuilder.swift in Sources */,
 				DF86DC7B2673B1A600446FF0 /* CoinEntity.swift in Sources */,
 				DF86DC612673B0B300446FF0 /* MapperData.swift in Sources */,
 				DF4A7DCC2672F5D30028774B /* SceneDelegate.swift in Sources */,
@@ -684,6 +691,7 @@
 				DF86DC602673B0B300446FF0 /* Network.swift in Sources */,
 				DF86DC5F2673B0B300446FF0 /* BaseResponse.swift in Sources */,
 				DF58D9B82672F8C6003A90E5 /* HomeProtocols.swift in Sources */,
+				DF534E3B2677A11B003D0A45 /* Utils.swift in Sources */,
 				DF58D9B62672F8C6003A90E5 /* HomeRouter.swift in Sources */,
 				DF86DC712673B0B300446FF0 /* EndPointType.swift in Sources */,
 				DF46DC0326744C9E008CBB65 /* HomeTopView.swift in Sources */,
@@ -870,7 +878,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XTP22H8L47;
 				INFOPLIST_FILE = Crypto_Currency_Wallet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -892,7 +900,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XTP22H8L47;
 				INFOPLIST_FILE = Crypto_Currency_Wallet/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

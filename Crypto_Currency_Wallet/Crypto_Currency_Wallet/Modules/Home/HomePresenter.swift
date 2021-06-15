@@ -10,26 +10,107 @@
 
 import UIKit
 
-class HomePresenter: HomePresenterProtocol {
-    func getListCoin() {
-        interactor?.getListCoin()
+class HomePresenter {
+    
+    var listCoin: [CoinEntity] = [] {
+        didSet {
+            view?.reloadData()
+        }
     }
     
-
+    var count: Int {
+        return listCoin.count
+    }
+    
+    var listCoinOrigin: [CoinEntity] = []
+    
+    var pageType: PageType = .search
+    
+    var searchText = ""
+    
+    var showSkeleton = true
+    
+    weak var timer: Timer?
+    
     weak private var view: HomeViewProtocol?
     var interactor: HomeInteractorInputProtocol?
     private let router: HomeWireframeProtocol
-
-    init(interface: HomeViewProtocol, interactor: HomeInteractorInputProtocol?, router: HomeWireframeProtocol) {
+    
+    init(interface: HomeViewProtocol,
+         interactor: HomeInteractorInputProtocol?,
+         router: HomeWireframeProtocol) {
         self.view = interface
         self.interactor = interactor
         self.router = router
     }
+    
+    func startTimer(_ time: Double) {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: AppConstant.countdownRefresh,
+                                     repeats: true) { [weak self] _ in
+            self?.interactor?.getListCoin()
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+    }
 
+    deinit {
+        stopTimer()
+        Reachability.shared.stopMonitoring()
+    }
+    
+}
+
+extension HomePresenter: HomePresenterProtocol {
+    
+    func getListCoinRepeat(_ time: Double) {
+        interactor?.getListCoin()
+        startTimer(time)
+    }
+    
+    func removeCoin(atIndex indexPath: IndexPath) {
+        if pageType == .favorite {
+            self.listCoin.remove(at: indexPath.row)
+        }
+    }
+    
+    func coin(atIndex indexPath: IndexPath) -> CoinEntity? {
+        if listCoin.indices.contains(indexPath.row) {
+            return listCoin[indexPath.row]
+        } else {
+            return nil
+        }
+    }
+    
+    func filterDataType(_ type: PageType) {
+        self.pageType = type
+        switch type {
+        case .search:
+            filterDataTypeText(searchText)
+        default:
+            self.listCoin = self.listCoinOrigin.filter({$0.isFavorite})
+        }
+    }
+    
+    func filterDataTypeText(_ text: String) {
+        self.searchText = text
+        self.listCoin = text.isEmpty
+            ? self.listCoinOrigin
+            : self.listCoinOrigin.filter({$0.name&.lowercased().contains(text)
+                                            || $0.base&.lowercased().contains(text)})
+    }
 }
 
 extension HomePresenter: HomeInteractorOutputProtocol {
-    func didGetListCoin(result: [CoinEntity]?, error: APIError?) {
-        view?.didGetListCoin(result: result, error: error)
+    func didGetListCoin(result: [CoinEntity]) {
+        showSkeleton = false
+        self.listCoinOrigin = result
+        filterDataType(self.pageType)
+    }
+    
+    func didGetListCoinError(error: APIError) {
+        
     }
 }

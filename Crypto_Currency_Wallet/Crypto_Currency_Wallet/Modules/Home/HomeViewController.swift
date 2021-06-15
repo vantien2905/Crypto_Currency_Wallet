@@ -16,44 +16,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var topView      : HomeTopView!
 
 	var presenter: HomePresenterProtocol?
-    
-    var listCoin: [CoinEntity] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    
-    var listCoinOrigin: [CoinEntity] = []
-    
-    var pageType: PageType = .search
-    
-    weak var timer: Timer?
-    
-    var searchText = ""
 
 	override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
         setUpViews()
-        presenter?.getListCoin()
-        startTimer()
         hideKeyboard()
-    }
-    
-    func startTimer() {
-        timer?.invalidate()
-        timer = Timer.scheduledTimer(withTimeInterval: AppConstant.countdownRefresh,
-                                     repeats: true) { [weak self] _ in
-            self?.presenter?.getListCoin()
-        }
-    }
-    
-    func stopTimer() {
-        timer?.invalidate()
-    }
-
-    deinit {
-        stopTimer()
+        presenter?.getListCoinRepeat(AppConstant.countdownRefresh)
     }
     
     private func configureTableView() {
@@ -66,60 +35,45 @@ class HomeViewController: UIViewController {
     private func setUpViews() {
         topView.actionCallback = {[weak self] type in
             guard let self = self else { return }
-            self.pageType = type
-            switch type {
-            case .search:
-                self.listCoin = self.listCoinOrigin
-            default:
-                self.listCoin = self.listCoinOrigin.filter({$0.isFavorite})
-            }
+            self.presenter?.filterDataType(type)
         }
         
         topView.searchDidChangeCallBack = {[weak self] value in
             guard let self = self else { return }
-            self.searchText = value
-            self.listCoin = value.isEmpty
-                ? self.listCoinOrigin
-                : self.listCoinOrigin.filter({$0.name&.lowercased().contains(value)
-                                                || $0.base&.lowercased().contains(value)})
+            self.presenter?.filterDataTypeText(value)
         }
     }
 }
 
 extension HomeViewController: HomeViewProtocol {
-    func didGetListCoin(result: [CoinEntity]?, error: APIError?) {
-        if let result = result {
-            self.listCoinOrigin = result
-            if pageType == .search {
-                self.listCoin = searchText.isEmpty ? result : result.filter({$0.name&.lowercased().contains(searchText) || $0.base&.lowercased().contains(searchText)})
-            } else {
-                self.listCoin = result.filter({$0.isFavorite})
-            }
-        } else {
-
-        }
+    func reloadData() {
+        tableView.reloadData()
     }
 }
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        listCoin.isEmpty ? tableView.setEmptyView() : tableView.restore()
-        return listCoin.count
+        if presenter?.showSkeleton == true {
+            return 13
+        } else {
+            presenter?.count == 0 ? tableView.setEmptyView() : tableView.restore()
+            return presenter?.count ?? 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueTableCell(CoinTableViewCell.self)
-        cell.setData(coin: listCoin[indexPath.row], indexPath: indexPath)
-        cell.delegate = self
-    
+        cell.configureSkeletons(presenter?.showSkeleton ?? false)
+        if presenter?.showSkeleton == false {
+            cell.setData(coin: presenter?.coin(atIndex: indexPath), indexPath: indexPath)
+            cell.delegate = self
+        }
         return cell
     }
 }
 
 extension HomeViewController: CoinTableViewCellDelegate {
     func favoriteActionTapped(indexPath: IndexPath) {
-        if pageType == .favorite {
-            self.listCoin.remove(at: indexPath.row)
-        }
+        self.presenter?.removeCoin(atIndex: indexPath)
     }
 }

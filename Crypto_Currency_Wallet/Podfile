@@ -9,6 +9,7 @@ def main_pods
     pod 'SkeletonView'
     pod 'RealmSwift'
     pod 'SnapKit'
+    pod 'Toast-Swift'
 end
 
 target 'Crypto_Currency_Wallet' do

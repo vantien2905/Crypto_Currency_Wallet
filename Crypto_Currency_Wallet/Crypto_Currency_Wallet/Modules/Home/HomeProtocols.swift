@@ -15,17 +15,28 @@ protocol HomeWireframeProtocol: AnyObject {
 }
 //MARK: Presenter -
 protocol HomePresenterProtocol: AnyObject {
+    
+    var listCoin: [CoinEntity] { get set }
+    var count: Int { get }
+    var pageType: PageType { get set }
+    var searchText: String { get set }
+    var showSkeleton: Bool { get }
 
     var interactor: HomeInteractorInputProtocol? { get set }
     
-    func getListCoin()
+    func getListCoinRepeat(_ time: Double)
+    func coin(atIndex indexPath: IndexPath) -> CoinEntity?
+    func filterDataType(_ type: PageType)
+    func filterDataTypeText(_ text: String)
+    func removeCoin(atIndex indexPath: IndexPath)
 }
 
 //MARK: Interactor -
 protocol HomeInteractorOutputProtocol: AnyObject {
 
     /* Interactor -> Presenter */
-    func didGetListCoin(result: [CoinEntity]?, error: APIError?)
+    func didGetListCoin(result: [CoinEntity])
+    func didGetListCoinError(error: APIError)
 }
 
 protocol HomeInteractorInputProtocol: AnyObject {
@@ -42,5 +53,5 @@ protocol HomeViewProtocol: AnyObject {
     var presenter: HomePresenterProtocol?  { get set }
 
     /* Presenter -> ViewController */
-    func didGetListCoin(result: [CoinEntity]?, error: APIError?)
+    func reloadData()
 }

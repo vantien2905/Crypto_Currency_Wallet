@@ -97,6 +97,7 @@
                 <outlet property="favoriteButton" destination="lOq-r2-Dw1" id="X8f-vq-llq"/>
                 <outlet property="logoImageView" destination="noq-oa-fgP" id="jjy-35-Hjr"/>
                 <outlet property="nameLabel" destination="Llf-iD-x6o" id="0tT-bm-t68"/>
+                <outlet property="sellPriceImage" destination="DD0-EE-TKO" id="qOn-IQ-l1l"/>
                 <outlet property="sellPriceLabel" destination="0Fn-Xh-VLc" id="CBN-XQ-AKz"/>
             </connections>
             <point key="canvasLocation" x="-49" y="97"/>

@@ -12,6 +12,7 @@ PODS:
   - SkeletonView (1.15.0)
   - SnapKit (5.0.1)
   - SwiftyJSON (4.2.0)
+  - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (= 4.7.3)
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - SkeletonView
   - SnapKit
   - SwiftyJSON (= 4.2.0)
+  - Toast-Swift
 
 SPEC REPOS:
   trunk:
@@ -32,6 +34,7 @@ SPEC REPOS:
     - SkeletonView
     - SnapKit
     - SwiftyJSON
+    - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -42,7 +45,8 @@ SPEC CHECKSUMS:
   SkeletonView: cac18a3ac4f893b09d99e65072d806ef08377aae
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 81e12feb42c40410a35b30f271b4aa40621ab078
+PODFILE CHECKSUM: 5a1156d731cb5605db3e413ee37c964b812ab3e4
 
 COCOAPODS: 1.10.1

@@ -11,6 +11,7 @@
 import UIKit
 
 class HomeInteractor: HomeInteractorInputProtocol {
+    
     func getListCoin() {
         let data = RealmHelper.share.getObjects(CoinEntity.self).toArray(ofType: CoinEntity.self)
         Provider.shared.homeAPIService.getListCoin { result in
@@ -22,12 +23,12 @@ class HomeInteractor: HomeInteractorInputProtocol {
                 }
             }
             RealmHelper.share.addObjects(result)
-            self.presenter?.didGetListCoin(result: result, error: nil)
+            self.presenter?.didGetListCoin(result: result)
         } failure: { error in
-            self.presenter?.didGetListCoin(result: nil, error: error)
+            guard let error = error else { return }
+            self.presenter?.didGetListCoinError(error: error)
         }
     }
     
-
     weak var presenter: HomeInteractorOutputProtocol?
 }
