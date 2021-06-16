@@ -8,7 +8,7 @@
 import XCTest
 
 class Crypto_Currency_WalletUITests: XCTestCase {
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -21,14 +21,39 @@ class Crypto_Currency_WalletUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
+    
+    func testUTC01SearchView() throws {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        let searchButton = app.buttons["searchButton"]
+        let favoriteButton = app.buttons["favoriteButton"]
+        let textfield = app.textFields["searchTextField"]
+        
+        XCTAssertTrue(searchButton.exists)
+        XCTAssertTrue(favoriteButton.exists)
+        XCTAssertTrue(textfield.exists)
+        
+        favoriteButton.tap()
+        XCTAssertTrue(app.staticTexts["Favorite"].exists)
+        XCTAssertFalse(textfield.exists)
+        
+        searchButton.tap()
+        XCTAssertTrue(textfield.exists)
+        XCTAssertFalse(app.staticTexts["Favorite"].exists)
+        
+        textfield.tap()
+        textfield.typeText("not Have Coin This Name")
+        let label = app.staticTexts["Empty data"]
+        XCTAssertTrue(label.exists)
+    }
+    
+    func testUTC02ShowNotInternet() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
         
-                // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertTrue(app.staticTexts["Open setting"].exists)
     }
 
     func testLaunchPerformance() throws {

@@ -10,14 +10,17 @@ import XCTest
 
 class Crypto_Currency_WalletTests: XCTestCase {
     
+    var homeVC: HomeViewController!
 
     override func setUpWithError() throws {
-        
+        homeVC = HomeRouter.createModule()
+        homeVC.loadViewIfNeeded()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        homeVC = nil
     }
 
     func testExample() throws {

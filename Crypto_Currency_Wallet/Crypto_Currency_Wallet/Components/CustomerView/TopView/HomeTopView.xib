@@ -31,18 +31,20 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZJ-ao-0SP">
                                     <rect key="frame" x="0.0" y="0.0" width="527" height="123"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rk-4h-lCY">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rk-4h-lCY" userLabel="search button">
                                             <rect key="frame" x="0.0" y="0.0" width="40" height="123"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="searchButton"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="IGu-cB-nHt"/>
                                             </constraints>
-                                            <state key="normal" image="search"/>
+                                            <state key="normal" image="search_selected"/>
                                             <connections>
                                                 <action selector="searchButtonTapped" destination="-1" eventType="touchUpInside" id="iG0-d3-Gv2"/>
                                             </connections>
                                         </button>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search by name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zTp-sd-OVG">
                                             <rect key="frame" x="50" y="5" width="477" height="113"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="searchTextField"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
@@ -71,8 +73,9 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPx-wI-uKH">
                                     <rect key="frame" x="537" y="0.0" width="40" height="123"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9w-ka-9i5">
+                                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9w-ka-9i5" userLabel="favorite button">
                                             <rect key="frame" x="0.0" y="0.0" width="40" height="123"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="favoriteButton"/>
                                             <state key="normal" image="favorite"/>
                                             <connections>
                                                 <action selector="favoriteButtonTapped" destination="-1" eventType="touchUpInside" id="1lE-8v-CRa"/>
@@ -123,7 +126,7 @@
     </objects>
     <resources>
         <image name="favorite" width="100" height="100"/>
-        <image name="search" width="64" height="64"/>
+        <image name="search_selected" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

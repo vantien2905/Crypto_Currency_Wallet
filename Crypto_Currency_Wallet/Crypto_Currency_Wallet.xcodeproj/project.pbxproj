@@ -49,14 +49,12 @@
 		DF86DC602673B0B300446FF0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86DC3F2673B0B300446FF0 /* Network.swift */; };
 		DF86DC612673B0B300446FF0 /* MapperData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86DC402673B0B300446FF0 /* MapperData.swift */; };
 		DF86DC622673B0B300446FF0 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86DC412673B0B300446FF0 /* NetworkRequest.swift */; };
-		DF86DC632673B0B300446FF0 /* DeviceParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86DC432673B0B300446FF0 /* DeviceParam.swift */; };
 		DF86DC712673B0B300446FF0 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86DC532673B0B300446FF0 /* EndPointType.swift */; };
 		DF86DC722673B0B300446FF0 /* HomeEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86DC542673B0B300446FF0 /* HomeEndPoint.swift */; };
 		DF86DC762673B0B300446FF0 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86DC5A2673B0B300446FF0 /* Provider.swift */; };
 		DF86DC772673B0B300446FF0 /* HomeAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86DC5B2673B0B300446FF0 /* HomeAPIService.swift */; };
 		DF86DC7B2673B1A600446FF0 /* CoinEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86DC7A2673B1A600446FF0 /* CoinEntity.swift */; };
-		DF86DC7C2673B1A600446FF0 /* CoinEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86DC7A2673B1A600446FF0 /* CoinEntity.swift */; };
-		DF86DC7D2673B1A600446FF0 /* CoinEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86DC7A2673B1A600446FF0 /* CoinEntity.swift */; };
+		DFEAEF952679EC2D008531F4 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEAEF942679EC2D008531F4 /* UIApplication+Extensions.swift */; };
 		F17B156298DB6AE7BDD19067 /* Pods_Crypto_Currency_Wallet_Crypto_Currency_WalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4667A81140B42D0A24601A0 /* Pods_Crypto_Currency_Wallet_Crypto_Currency_WalletUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,12 +128,12 @@
 		DF86DC3F2673B0B300446FF0 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		DF86DC402673B0B300446FF0 /* MapperData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapperData.swift; sourceTree = "<group>"; };
 		DF86DC412673B0B300446FF0 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
-		DF86DC432673B0B300446FF0 /* DeviceParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceParam.swift; sourceTree = "<group>"; };
 		DF86DC532673B0B300446FF0 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		DF86DC542673B0B300446FF0 /* HomeEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEndPoint.swift; sourceTree = "<group>"; };
 		DF86DC5A2673B0B300446FF0 /* Provider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
 		DF86DC5B2673B0B300446FF0 /* HomeAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeAPIService.swift; sourceTree = "<group>"; };
 		DF86DC7A2673B1A600446FF0 /* CoinEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinEntity.swift; sourceTree = "<group>"; };
+		DFEAEF942679EC2D008531F4 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		EF0DDF608F0DA628318B3F64 /* Pods-Crypto_Currency_Wallet-Crypto_Currency_WalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Crypto_Currency_Wallet-Crypto_Currency_WalletUITests.debug.xcconfig"; path = "Target Support Files/Pods-Crypto_Currency_Wallet-Crypto_Currency_WalletUITests/Pods-Crypto_Currency_Wallet-Crypto_Currency_WalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FF38FF94E4B0C167B6735065 /* Pods_Crypto_Currency_WalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Crypto_Currency_WalletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -202,6 +200,7 @@
 		DF46DC0126744C7B008CBB65 /* CustomerView */ = {
 			isa = PBXGroup;
 			children = (
+				DF7165952678B01800EA2F20 /* LostInternet */,
 				DF534E3C2677AB0D003D0A45 /* TopView */,
 				DF534E3D2677AB58003D0A45 /* ComponentBuilder.swift */,
 			);
@@ -264,15 +263,11 @@
 		DF4A7DC82672F5D30028774B /* Crypto_Currency_Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				DFEAEF96267A4230008531F4 /* SupportFiles */,
 				DF46DC0C2674F3A7008CBB65 /* Resources */,
 				DF7AAB1D2673B3D5008C1909 /* Components */,
 				DF86DC3A2673B0B300446FF0 /* Services */,
 				DF4A7DF92672F7510028774B /* Modules */,
-				DF4A7DC92672F5D30028774B /* AppDelegate.swift */,
-				DF4A7DCB2672F5D30028774B /* SceneDelegate.swift */,
-				DF4A7DD42672F5D40028774B /* LaunchScreen.storyboard */,
-				DF4A7DD22672F5D40028774B /* Assets.xcassets */,
-				DF4A7DD72672F5D40028774B /* Info.plist */,
 			);
 			path = Crypto_Currency_Wallet;
 			sourceTree = "<group>";
@@ -315,7 +310,6 @@
 		DF58D9AE2672F8BC003A90E5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DF7165952678B01800EA2F20 /* LostInternet */,
 				DF7AAB262673BED2008C1909 /* Cells */,
 				DF58D9AF2672F8C6003A90E5 /* HomePresenter.swift */,
 				DF58D9B02672F8C6003A90E5 /* HomeRouter.swift */,
@@ -364,6 +358,7 @@
 				DF7AAB302673C48C008C1909 /* UIView+Extensions.swift */,
 				DF40CDF126771520009F7CC7 /* UIView+Animations.swift */,
 				DF40CDF326771E56009F7CC7 /* UIColor+Extensions.swift */,
+				DFEAEF942679EC2D008531F4 /* UIApplication+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -390,7 +385,6 @@
 			children = (
 				DF7AAB232673B4D0008C1909 /* Entities */,
 				DF86DC3B2673B0B300446FF0 /* Network */,
-				DF86DC422673B0B300446FF0 /* APIParam */,
 				DF86DC4C2673B0B300446FF0 /* Endpoint */,
 				DF86DC552673B0B300446FF0 /* APIService */,
 			);
@@ -400,8 +394,8 @@
 		DF86DC3B2673B0B300446FF0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				DF86DC3C2673B0B300446FF0 /* APIError.swift */,
 				DF86DC3D2673B0B300446FF0 /* Response */,
+				DF86DC3C2673B0B300446FF0 /* APIError.swift */,
 				DF86DC3F2673B0B300446FF0 /* Network.swift */,
 				DF86DC402673B0B300446FF0 /* MapperData.swift */,
 				DF86DC412673B0B300446FF0 /* NetworkRequest.swift */,
@@ -415,14 +409,6 @@
 				DF86DC3E2673B0B300446FF0 /* BaseResponse.swift */,
 			);
 			path = Response;
-			sourceTree = "<group>";
-		};
-		DF86DC422673B0B300446FF0 /* APIParam */ = {
-			isa = PBXGroup;
-			children = (
-				DF86DC432673B0B300446FF0 /* DeviceParam.swift */,
-			);
-			path = APIParam;
 			sourceTree = "<group>";
 		};
 		DF86DC4C2673B0B300446FF0 /* Endpoint */ = {
@@ -457,6 +443,18 @@
 				DF86DC5A2673B0B300446FF0 /* Provider.swift */,
 			);
 			path = APIServiceProvider;
+			sourceTree = "<group>";
+		};
+		DFEAEF96267A4230008531F4 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DF4A7DC92672F5D30028774B /* AppDelegate.swift */,
+				DF4A7DCB2672F5D30028774B /* SceneDelegate.swift */,
+				DF4A7DD42672F5D40028774B /* LaunchScreen.storyboard */,
+				DF4A7DD22672F5D40028774B /* Assets.xcassets */,
+				DF4A7DD72672F5D40028774B /* Info.plist */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -702,6 +700,7 @@
 			files = (
 				DF7AAB292673BEFA008C1909 /* CoinTableViewCell.swift in Sources */,
 				DF40CDF426771E56009F7CC7 /* UIColor+Extensions.swift in Sources */,
+				DFEAEF952679EC2D008531F4 /* UIApplication+Extensions.swift in Sources */,
 				DF86DC622673B0B300446FF0 /* NetworkRequest.swift in Sources */,
 				DF7AAB222673B441008C1909 /* String+Extensions.swift in Sources */,
 				DF86DC722673B0B300446FF0 /* HomeEndPoint.swift in Sources */,
@@ -736,7 +735,6 @@
 				DF71658A267882C800EA2F20 /* Reachability.swift in Sources */,
 				DF46DC0826744CD9008CBB65 /* BaseViewXib.swift in Sources */,
 				DF86DC5E2673B0B300446FF0 /* APIError.swift in Sources */,
-				DF86DC632673B0B300446FF0 /* DeviceParam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,7 +743,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF4A7DE12672F5D50028774B /* Crypto_Currency_WalletTests.swift in Sources */,
-				DF86DC7C2673B1A600446FF0 /* CoinEntity.swift in Sources */,
 				DF7AAB322673C48C008C1909 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -755,7 +752,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF4A7DEC2672F5D50028774B /* Crypto_Currency_WalletUITests.swift in Sources */,
-				DF86DC7D2673B1A600446FF0 /* CoinEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,7 +915,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TL9L9926Y8;
-				INFOPLIST_FILE = Crypto_Currency_Wallet/Info.plist;
+				INFOPLIST_FILE = "Crypto_Currency_Wallet//SupportFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -941,7 +937,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TL9L9926Y8;
-				INFOPLIST_FILE = Crypto_Currency_Wallet/Info.plist;
+				INFOPLIST_FILE = "Crypto_Currency_Wallet//SupportFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
