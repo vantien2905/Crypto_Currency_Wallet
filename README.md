@@ -5,7 +5,7 @@
 # Demo
 | Search | Favorite |
 |-----|-----|
-|![home](doc/img/search_page.png)|![home](doc/img/favorite_page.png)|
+|![home](Crypto_Currency_Wallet/doc/img/search_page.png)|![home](Crypto_Currency_Wallet/doc/img/favorite_page.png)|
 
 # Getting Started
 
