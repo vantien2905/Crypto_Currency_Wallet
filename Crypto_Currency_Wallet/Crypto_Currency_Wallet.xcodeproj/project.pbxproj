@@ -40,11 +40,8 @@
 		DF7AAB222673B441008C1909 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AAB212673B441008C1909 /* String+Extensions.swift */; };
 		DF7AAB252673BB4B008C1909 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AAB242673BB4B008C1909 /* UIViewController+Extensions.swift */; };
 		DF7AAB292673BEFA008C1909 /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AAB272673BEF9008C1909 /* CoinTableViewCell.swift */; };
-		DF7AAB2A2673BEFA008C1909 /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AAB272673BEF9008C1909 /* CoinTableViewCell.swift */; };
 		DF7AAB2B2673BEFA008C1909 /* CoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF7AAB282673BEF9008C1909 /* CoinTableViewCell.xib */; };
-		DF7AAB2C2673BEFA008C1909 /* CoinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF7AAB282673BEF9008C1909 /* CoinTableViewCell.xib */; };
 		DF7AAB2E2673C44B008C1909 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AAB2D2673C44B008C1909 /* UITableView+Extensions.swift */; };
-		DF7AAB2F2673C44B008C1909 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AAB2D2673C44B008C1909 /* UITableView+Extensions.swift */; };
 		DF7AAB312673C48C008C1909 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AAB302673C48C008C1909 /* UIView+Extensions.swift */; };
 		DF7AAB322673C48C008C1909 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7AAB302673C48C008C1909 /* UIView+Extensions.swift */; };
 		DF86DC5E2673B0B300446FF0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86DC3C2673B0B300446FF0 /* APIError.swift */; };
@@ -583,7 +580,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF7AAB2C2673BEFA008C1909 /* CoinTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,10 +744,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF7AAB2A2673BEFA008C1909 /* CoinTableViewCell.swift in Sources */,
 				DF4A7DE12672F5D50028774B /* Crypto_Currency_WalletTests.swift in Sources */,
 				DF86DC7C2673B1A600446FF0 /* CoinEntity.swift in Sources */,
-				DF7AAB2F2673C44B008C1909 /* UITableView+Extensions.swift in Sources */,
 				DF7AAB322673C48C008C1909 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -946,14 +940,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XTP22H8L47;
+				DEVELOPMENT_TEAM = TL9L9926Y8;
 				INFOPLIST_FILE = Crypto_Currency_Wallet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ch.resource.vn.Crypto-Currency-Wallet";
+				PRODUCT_BUNDLE_IDENTIFIER = "ch.resource.vn.Crypto-Currency-Wallet.test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -967,7 +961,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XTP22H8L47;
+				DEVELOPMENT_TEAM = TL9L9926Y8;
 				INFOPLIST_FILE = Crypto_Currency_WalletTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -990,7 +984,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XTP22H8L47;
+				DEVELOPMENT_TEAM = TL9L9926Y8;
 				INFOPLIST_FILE = Crypto_Currency_WalletTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1012,7 +1006,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XTP22H8L47;
+				DEVELOPMENT_TEAM = TL9L9926Y8;
 				INFOPLIST_FILE = Crypto_Currency_WalletUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1033,7 +1027,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XTP22H8L47;
+				DEVELOPMENT_TEAM = TL9L9926Y8;
 				INFOPLIST_FILE = Crypto_Currency_WalletUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

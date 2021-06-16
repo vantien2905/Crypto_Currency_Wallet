@@ -100,6 +100,7 @@ class HomeTopView: BaseViewXib {
             self.searchTextfield.alpha = 0
             self.favoriteLabel.alpha = 1
             self.viewTest.backgroundColor = AppColor.favorite
+            
         } complete: {
             self.searchTextfield.isHidden = true
             self.favoriteLabel.isHidden = false

@@ -9,8 +9,10 @@ import XCTest
 @testable import Crypto_Currency_Wallet
 
 class Crypto_Currency_WalletTests: XCTestCase {
+    
 
     override func setUpWithError() throws {
+        
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 

@@ -22,6 +22,8 @@ enum IMG: String {
 
 extension IMG {
     var image: UIImage? {
-        return UIImage(named: self.rawValue, in: Bundle(identifier: "ch.resource.vn.Crypto-Currency-Wallet.test"), compatibleWith: nil)
+        return UIImage(named: self.rawValue,
+                       in: Bundle(identifier: "ch.resource.vn.Crypto-Currency-Wallet.test"),
+                       compatibleWith: nil)
     }
 }
