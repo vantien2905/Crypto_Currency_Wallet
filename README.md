@@ -32,14 +32,13 @@
 
 | ID | UI | Description | Input | Expected Output | Actual Output | Test Result |
 | ------------- | ------------- | ------------- |  ------------- | ------------- |  ------------- | ------------- |
-| UTC01 | Search view |  Check action of search view | Tap search or favorite button | ![search_view](Crypto_Currency_Wallet/doc/img/search_button.png) | ![search_view](Crypto_Currency_Wallet/doc/img/favorite_button.png) | Passed | 
+| UTC01 | Search view |  Check action of search view | Tap search or favorite button or swipe left and swipe right on screen | ![search_view](Crypto_Currency_Wallet/doc/img/search_button.png) | ![search_view](Crypto_Currency_Wallet/doc/img/favorite_button.png) | Passed | 
 | UTC02 | Empty Search |  Check list empty of currency when search | Type *not Have Coin This Name* | ![empty_data](Crypto_Currency_Wallet/doc/img/empty_data.png) | ![empty_data](Crypto_Currency_Wallet/doc/img/empty_data.png) | Passed |
 
 ## Libraries and Frameworks
-- Model with *ObjectMapper* and *SwiftJSON*
+- Model parser with *ObjectMapper* and *SwiftJSON*
 - Network: *Alamofire* with layer architecture
-- Layout: *ConstraintLayout - Xib* and Snapkit
-- Lint: *Ktlint*
+- Layout: *ConstraintLayout - Xib* and *Snapkit*
 - Database: *Realm*
 - Image: *SDWebImage*
 - Loading: *SkeletonView*
